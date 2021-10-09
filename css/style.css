@@ -13,10 +13,40 @@
     src: url(../assets/fonts/DMSans-Regular.ttf)
 }
 
+header {
+    text-align: center;
+}
+
 body {
     background-color: #FFF3F3;
 }
 
 footer {
     background-color: #ffe6ff;
+}
+
+.radial-gradient {
+    background:radial-gradient(at center, red, #cc2bec);
+}
+
+.lines-effect::before, .lines-effect::after {
+    content:"-";
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color: black;
+    top:2.5em;
+}
+
+.lines-effect::before {
+    left: -90px;
+}
+
+.lines-effect::after {
+    left: 240px;
+}
+
+.lines-effect {
+    display: inline-block;
+    position: relative;
 }
