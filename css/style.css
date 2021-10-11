@@ -1,7 +1,3 @@
-/*selector {
-    propiedad : 456
-    propiedad : "23e23px"
-}*/
 
 @font-face {
     font-family: "DM Sans";
@@ -9,8 +5,9 @@
 }
 
 * {
+    text-decoration: none;   /* Le quita los subrayados del link a los íconos */
     font-family: 'DM Sans', sans-serif;
-    src: url(../assets/fonts/DMSans-Regular.ttf)
+    src: url(../assets/fonts/DMSans-Regular.ttf);
 }
 
 header {
@@ -29,8 +26,13 @@ footer {
     background:radial-gradient(at center, red, #cc2bec);
 }
 
+
+/************************************************************/
+/*   CREACIÓN DE LAS DOS LÍNEAS A LOS COSTADOS DEL TÍTULO   */
+/************************************************************/
+
 .lines-effect::before, .lines-effect::after {
-    content:"-";
+    content:"";
     position: absolute;
     width: 120px;
     height: 3px;
@@ -49,4 +51,26 @@ footer {
 .lines-effect {
     display: inline-block;
     position: relative;
+}
+
+/*******************************************************************/
+/*   FIN DE CREACIÓN DE LAS DOS LÍNEAS A LOS COSTADOS DEL TÍTULO   */
+/*******************************************************************/
+
+
+#iconos {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#iconos img:hover{
+    width: 45%;
+}
+
+#iconos > tbody > tr > td img {
+    border-color: red;  /*SACARLO CUANDO TERMINE LA PÁGINA */
+    border-width: 1px;  /*SACARLO CUANDO TERMINE LA PÁGINA */
+    border-style: solid;  /*SACARLO CUANDO TERMINE LA PÁGINA */
+    margin-left: 3em;
 }
