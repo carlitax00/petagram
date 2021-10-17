@@ -1,11 +1,10 @@
-
 @font-face {
     font-family: "DM Sans";
     src: url(../assets/fonts/DMSans-Regular.ttf);
 }
 
 * {
-    text-decoration: none;                  /* Le quita los subrayados del link a los íconos */
+    text-decoration: none; /* Le quita los subrayados del link a los íconos */
     font-family: 'DM Sans', sans-serif;
     src: url(../assets/fonts/DMSans-Regular.ttf);
 }
@@ -24,8 +23,12 @@ footer {
     bottom: 10%;
 }
 
-.radial-gradient {                          /* Línea debajo de los íconos */
+ /* Línea debajo de los íconos */
+.radial-gradient {
     background:radial-gradient(at center, red, #cc2bec);
+    width: 90%;
+    height: 3px;
+    align-self: auto;
 }
 
 
@@ -53,31 +56,8 @@ footer {
 }
 /*--------------------------- fin creación de las dos líneas a los costados del título ---------------------------*/
 
-#iconos {
-    margin-left: auto;
-    margin-right: auto;
-}
 
-
-/*----------------------------- INICIO TRANSICIÓN DE LOS ÍCONOS SUPERIORES AL HACER HOVER-IN Y HOVER-OUT -----------------------------*/
-#iconos img {
-    transition: 0.5s;       /* Se parametriza el estado inicial de la imagen, a la que debe volver */
-}
-
-#iconos img:hover {
-    transform: scale(0.8);
-    transition: 0.5s;
-}
-/*----------------------------- fin transición de los íconos superiores al hacer hover-in y hover-out -----------------------------*/
-
-
-#iconos > tbody > tr > td img {
-    border-color: red;  /*SACARLO CUANDO TERMINE LA PÁGINA */
-    border-width: 1px;  /*SACARLO CUANDO TERMINE LA PÁGINA */
-    border-style: solid;  /*SACARLO CUANDO TERMINE LA PÁGINA */
-    margin-left: 3em;
-}
-
+/*------------------------------------------------------ INICIO BOTONES ------------------------------------------------------*/
 .Btn {
 	text-decoration:none;
 	font-family:Arial;
@@ -112,4 +92,23 @@ footer {
 	background:linear-gradient(#fc154b, #d612b5);
     border-radius:25px 0 25px 0;
     transition: 0.5s;
+}
+/*------------------------------------------------------ fin botones ------------------------------------------------------*/
+
+
+/*-------------------------------------------------- INICIO MEDIA QUERIES --------------------------------------------------*/
+@media only screen and (max-width: 800px) {
+    body {
+        background: red;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        display: none
+    }
+
+    body {
+        background: green;
+    }
 }

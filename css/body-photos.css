@@ -1,0 +1,11 @@
+
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem;
+}
+
+.item-foto img {
+    width: 25%;
+    padding: 3rem;
+}
