@@ -1,0 +1,61 @@
+/*--------------------------- INICIO CREACIÓN DE LAS LÍNEAS A LOS COSTADOS DEL TÍTULO ---------------------------*/
+.lines-effect::before, .lines-effect::after {
+    content:"";
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color: black;
+    top:2.6em;
+}
+
+.lines-effect::before {
+    left: -140px;
+}
+
+.lines-effect::after {
+    right: -140px;
+}
+
+.lines-effect {
+    display:inline-block;
+    position:relative;
+}
+/*--------------------------- fin creación de las líneas a los costados del título ---------------------------*/
+
+ /* Línea debajo de los íconos */
+ .radial-gradient {
+    background:radial-gradient(at center, red, #cc2bec);
+    width: 80%;
+    height: 3px;
+    margin-bottom: 15px;
+}
+
+.header {
+    position:fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav img {
+    margin-left: 3em;
+    transition: 0.5s;       /* Se parametriza el estado inicial de la imagen, al que debe volver */
+}
+
+.nav img:hover {
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+
+.nav {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+#SignInBtn, #SignUpBtn {
+    float: left;
+    margin-left: 20px;
+}
+
