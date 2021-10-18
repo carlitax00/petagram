@@ -6,7 +6,6 @@
 * {
     text-decoration: none; /* Le quita los subrayados del link a los íconos */
     font-family: 'DM Sans', sans-serif;
-    src: url(../assets/fonts/DMSans-Regular.ttf);
 }
 
 header {
@@ -78,23 +77,4 @@ body::-webkit-scrollbar-thumb {
     border-radius:25px 0 25px 0;
     transition: 0.5s;
 }
-
 /*------------------------------------------------------ fin botones ------------------------------------------------------*/
-
-
-/*-------------------------------------------------- INICIO MEDIA QUERIES --------------------------------------------------*/
-@media only screen and (max-width: 800px) {
-    body {
-        background: red;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    header {
-        display: none
-    }
-
-    body {
-        background: green;
-    }
-}
