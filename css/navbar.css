@@ -25,25 +25,9 @@
  /* Línea debajo de los íconos */
  .radial-gradient {
     background:radial-gradient(at center, red, #cc2bec);
-    width: 80%;
+    width: 85%;
     height: 3px;
     margin-bottom: 15px;
-}
-
-.header {
-    position:fixed;
-    top: 0;
-    width: 100%;
-}
-
-.nav img {
-    margin-left: 3em;
-    transition: 0.5s;       /* Se parametriza el estado inicial de la imagen, al que debe volver */
-}
-
-.nav img:hover {
-    transform: scale(0.8);
-    transition: 0.5s;
 }
 
 .nav {
@@ -51,10 +35,17 @@
     display: flex;
     justify-content: center;
     list-style: none;
+    margin: auto;
 }
 
-#SignInBtn, #SignUpBtn {
-    float: left;
-    margin-left: 20px;
+.nav img {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    transition: 0.5s;       /* Se parametriza el estado inicial de la imagen, al que debe volver */
+}
+
+.nav img:hover {
+    transform: scale(0.8);
+    transition: 0.5s;
 }
 

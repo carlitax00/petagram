@@ -11,17 +11,23 @@
 header {
     background-color: #FFF3F3;
     text-align: center;
+	left: 0;
+	top: 0;
+	width: 100%;
+	position:fixed;
 }
 
 body {
     background-color: #FFF3F3;
-    margin: 200px 60px 0;
+    margin: 200px 60px 50px 60px;
 }
 
 footer {
     background-color: #ffe6ff;
     position:fixed;
-    bottom: 10%;
+    bottom: 0;
+	left: 0;
+	width: 100%
 }
 
 /*------------------------------------------------ INICIO ESTILO DEL SCROLLBAR ------------------------------------------------*/
@@ -77,4 +83,61 @@ body::-webkit-scrollbar-thumb {
     border-radius:25px 0 25px 0;
     transition: 0.5s;
 }
+
+#SignInBtn, #SignUpBtn {
+    margin-top: 20px;
+	position:absolute;
+}
+
+#SignInBtn {
+    right: 280px;
+}
+
+#SignUpBtn {
+    right: 120px;
+}
+
+#SignUpBtnResponsive, #SignInBtnResponsive {
+	display: none;
+}
 /*------------------------------------------------------ fin botones ------------------------------------------------------*/
+
+/*--------------------------- INICIO MEDIA QUERUES ---------------------------*/
+@media only screen and (max-width: 1300px) {
+	#SignUpBtn, #SignInBtn {
+		display: none;
+	}
+	
+	#SignUpBtnResponsive, #SignInBtnResponsive {
+		display:inline-block;
+		width: 50px;
+		margin-top: 20px;
+		position:absolute;
+	}
+
+	#SignInBtnResponsive {
+		right: 220px;
+		font-size: 1.4em;
+	}
+
+	#SignUpBtnResponsive {
+		right: 120px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+    }
+
+	.lines-effect::before, .lines-effect::after {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+    }
+}
+/*----------------------------- fin media queries -----------------------------*/
