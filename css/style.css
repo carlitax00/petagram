@@ -1,83 +1,53 @@
-
 @font-face {
     font-family: "DM Sans";
     src: url(../assets/fonts/DMSans-Regular.ttf);
 }
 
 * {
-    text-decoration: none;                  /* Le quita los subrayados del link a los íconos */
+    text-decoration: none; /* Le quita los subrayados del link a los íconos */
     font-family: 'DM Sans', sans-serif;
-    src: url(../assets/fonts/DMSans-Regular.ttf);
 }
 
 header {
+    background-color: #FFF3F3;
     text-align: center;
+	left: 0;
+	top: 0;
+	width: 100%;
+	position:fixed;
 }
 
 body {
     background-color: #FFF3F3;
+    margin: 200px 60px 50px 60px;
 }
 
 footer {
     background-color: #ffe6ff;
-    position:absolute;
-    bottom: 10%;
+    position:fixed;
+    bottom: 0;
+	left: 0;
+	width: 100%
 }
 
-.radial-gradient {                          /* Línea debajo de los íconos */
-    background:radial-gradient(at center, red, #cc2bec);
+/*------------------------------------------------ INICIO ESTILO DEL SCROLLBAR ------------------------------------------------*/
+body::-webkit-scrollbar {
+    width: 10px;
 }
 
-
-/*--------------------------- INICIO CREACIÓN DE LAS DOS LÍNEAS A LOS COSTADOS DEL TÍTULO ---------------------------*/
-.lines-effect::before, .lines-effect::after {
-    content:"";
-    position: absolute;
-    width: 120px;
-    height: 3px;
-    background-color: black;
-    top:2.5em;
+body::-webkit-scrollbar-track {
+    background-color: #ffa3dc;
+    border-radius: 100px;
 }
 
-.lines-effect::before {
-    left: -90px;
+body::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-image: linear-gradient(180deg, #cc2bec 0%, red 99%);
 }
-
-.lines-effect::after {
-    left: 240px;
-}
-
-.lines-effect {
-    display: inline-block;
-    position: relative;
-}
-/*--------------------------- fin creación de las dos líneas a los costados del título ---------------------------*/
-
-#iconos {
-    margin-left: auto;
-    margin-right: auto;
-}
+/*-------------------------------------------------- fin estilo del scrollbar -------------------------------------------------*/
 
 
-/*----------------------------- INICIO TRANSICIÓN DE LOS ÍCONOS SUPERIORES AL HACER HOVER-IN Y HOVER-OUT -----------------------------*/
-#iconos img {
-    transition: 0.5s;       /* Se parametriza el estado inicial de la imagen, a la que debe volver */
-}
-
-#iconos img:hover {
-    transform: scale(0.8);
-    transition: 0.5s;
-}
-/*----------------------------- fin transición de los íconos superiores al hacer hover-in y hover-out -----------------------------*/
-
-
-#iconos > tbody > tr > td img {
-    border-color: red;  /*SACARLO CUANDO TERMINE LA PÁGINA */
-    border-width: 1px;  /*SACARLO CUANDO TERMINE LA PÁGINA */
-    border-style: solid;  /*SACARLO CUANDO TERMINE LA PÁGINA */
-    margin-left: 3em;
-}
-
+/*------------------------------------------------------ INICIO BOTONES ------------------------------------------------------*/
 .Btn {
 	text-decoration:none;
 	font-family:Arial;
@@ -113,3 +83,61 @@ footer {
     border-radius:25px 0 25px 0;
     transition: 0.5s;
 }
+
+#SignInBtn, #SignUpBtn {
+    margin-top: 20px;
+	position:absolute;
+}
+
+#SignInBtn {
+    right: 240px;
+}
+
+#SignUpBtn {
+    right: 80px;
+}
+
+#SignUpBtnResponsive, #SignInBtnResponsive {
+	display: none;
+}
+/*------------------------------------------------------ fin botones ------------------------------------------------------*/
+
+/*--------------------------- INICIO MEDIA QUERUES ---------------------------*/
+@media only screen and (max-width: 1300px) {
+	#SignUpBtn, #SignInBtn {
+		display: none;
+	}
+
+	.lines-effect::before, .lines-effect::after {
+		display: none;
+	}
+	
+	#SignUpBtnResponsive, #SignInBtnResponsive {
+		display:inline-block;
+		width: 50px;
+		margin-top: 20px;
+		position:absolute;
+	}
+
+	#SignInBtnResponsive {
+		right: 180px;
+		font-size: 1.4em;
+	}
+
+	#SignUpBtnResponsive {
+		right: 80px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+    }
+}
+/*----------------------------- fin media queries -----------------------------*/
