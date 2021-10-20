@@ -30,6 +30,11 @@ footer {
 	width: 100%
 }
 
+#navheader {
+	width: 100%;
+	height: 200px;
+}
+
 /*------------------------------------------------ INICIO ESTILO DEL SCROLLBAR ------------------------------------------------*/
 body::-webkit-scrollbar {
     width: 10px;
