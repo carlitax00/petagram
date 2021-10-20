@@ -90,11 +90,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 #SignInBtn {
-    right: 280px;
+    right: 240px;
 }
 
 #SignUpBtn {
-    right: 120px;
+    right: 80px;
 }
 
 #SignUpBtnResponsive, #SignInBtnResponsive {
@@ -107,6 +107,10 @@ body::-webkit-scrollbar-thumb {
 	#SignUpBtn, #SignInBtn {
 		display: none;
 	}
+
+	.lines-effect::before, .lines-effect::after {
+		display: none;
+	}
 	
 	#SignUpBtnResponsive, #SignInBtnResponsive {
 		display:inline-block;
@@ -116,12 +120,12 @@ body::-webkit-scrollbar-thumb {
 	}
 
 	#SignInBtnResponsive {
-		right: 220px;
+		right: 180px;
 		font-size: 1.4em;
 	}
 
 	#SignUpBtnResponsive {
-		right: 120px;
+		right: 80px;
 	}
 }
 
@@ -129,10 +133,6 @@ body::-webkit-scrollbar-thumb {
     .column {
         flex: 50%;
     }
-
-	.lines-effect::before, .lines-effect::after {
-		display: none;
-	}
 }
 
 @media only screen and (max-width: 600px) {
