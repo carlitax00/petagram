@@ -20,6 +20,10 @@
     display:inline-block;
     position:relative;
 }
+
+.lines-effect img {
+    display:inline-block;
+}
 /*--------------------------- fin creación de las líneas a los costados del título ---------------------------*/
 
  /* Línea debajo de los íconos */
@@ -49,4 +53,19 @@
     transform: scale(0.8);
     transition: 0.5s;
 }
+
+
+/**************************************************** MEDIA QUERIES DEL HEADER **********/
+@media only screen and (max-width: 900px) {
+    .nav {
+        flex: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nav {
+        flex: 100%;
+    }
+}
+/**************************************************** MEDIA QUERIES DEL HEADER **********/
 
