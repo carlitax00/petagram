@@ -6,18 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/navbar.css">
     <title>Petagram - Contacto</title>
 </head>
 
 <header>
-    <div id="nav-placeholder">
-    </div>
-    <script>
-        $.get("/pages/header.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-    </script> 
+    <a id="SignInBtn" class="Btn" href="/pages/signin.html">Login</a>
+    <a id="SignUpBtn" class="Btn" href="/pages/signup.html">Sign Up</a>
+    <a id="SignInBtnResponsive" class="Btn" href=" /pages/signin.html"><i class="fas fa-sign-in-alt"></i></a>
+    <a id="SignUpBtnResponsive" class="Btn" href="/pages/signup.html"><i class="fas fa-user-plus"></i></a>
+
+    <a href="/index.html" class="lines-effect">
+        <img src="../Images/Texto - Petagram negro.png" style="height: 50px; margin-top: 20px; margin-bottom: 30px;"
+            title="Home!">
+    </a>
+
+    <hr class="radial-gradient">
 </header>
 
 <body>

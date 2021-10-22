@@ -3,6 +3,11 @@
     src: url(../assets/fonts/DMSans-Regular.ttf);
 }
 
+@font-face {
+	font-family: "Requited Script";
+	src: url(../assets/fonts/Requited-Script.ttf);
+}
+
 * {
     text-decoration: none; /* Le quita los subrayados del link a los íconos */
     font-family: 'DM Sans', sans-serif;
@@ -15,6 +20,7 @@ header {
 	width: 100%;
 	height: 200px;
 	position:fixed;
+	text-align: center;
 }
 
 body {
