@@ -16,14 +16,6 @@ height: 100%;
 object-fit: cover;
 }
 
-.gallerycontainer a img:nth-child(5), .gallerycontainer a img:nth-child(13) {
-grid-column-start: span 2;
-}
-
-.gallerycontainer a img:nth-child(7) {
-grid-row-start: span 2;
-}
-
 
 /*--------------------------- INICIO MEDIA QUERUES ---------------------------*/
 @media only screen and (max-width: 900px) {
