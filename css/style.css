@@ -3,23 +3,29 @@
     src: url(../assets/fonts/DMSans-Regular.ttf);
 }
 
+@font-face {
+	font-family: "Requited Script";
+	src: url(../assets/fonts/Requited-Script.ttf);
+}
+
 * {
     text-decoration: none; /* Le quita los subrayados del link a los íconos */
     font-family: 'DM Sans', sans-serif;
 }
 
 header {
-    background-color: #FFF3F3;
-    text-align: center;
+	background-color: #FFF3F3;
 	left: 0;
 	top: 0;
 	width: 100%;
+	height: 200px;
 	position:fixed;
+	text-align: center;
 }
 
 body {
     background-color: #FFF3F3;
-    margin: 200px 60px 50px 60px;
+    margin: 200px 40px 50px 40px;
 }
 
 footer {
@@ -27,8 +33,9 @@ footer {
     position:fixed;
     bottom: 0;
 	left: 0;
-	width: 100%
+	width: 100%;
 }
+
 
 /*------------------------------------------------ INICIO ESTILO DEL SCROLLBAR ------------------------------------------------*/
 body::-webkit-scrollbar {
@@ -48,9 +55,8 @@ body::-webkit-scrollbar-thumb {
 
 
 /*------------------------------------------------------ INICIO BOTONES ------------------------------------------------------*/
-.Btn {
+.headerbtn {
 	text-decoration:none;
-	font-family:Arial;
 	box-shadow:inset #ffffff 0px 3px 8px -1px,#999999 5px 4px 4px;
 	background:#d612b5;
     background:linear-gradient(#d612b5, #fc154b);
@@ -60,7 +66,7 @@ body::-webkit-scrollbar-thumb {
 	text-align:center;
 	vertical-align:middle;
 	display:inline-block;
-	font-size:18px;
+	right: 180px;
 	color:#ffffff;
 	width:115px;
 	height:30px;
@@ -72,13 +78,13 @@ body::-webkit-scrollbar-thumb {
     transition: 0.5s;
 }
 
-.Btn:active {
+.headerbtn:active {
 	box-shadow:inset #ffffff 0px 3px 8px -1px,#999999 5px 0 4px;
 	position:relative;
 	top:4px;
 }
 
-.Btn:hover {
+.headerbtn:hover {
 	background:linear-gradient(#fc154b, #d612b5);
     border-radius:25px 0 25px 0;
     transition: 0.5s;
@@ -87,57 +93,40 @@ body::-webkit-scrollbar-thumb {
 #SignInBtn, #SignUpBtn {
     margin-top: 20px;
 	position:absolute;
+	display:inline-block;
+	width: 50px;
 }
 
 #SignInBtn {
     right: 240px;
+	font-size: 1.5em;
 }
 
 #SignUpBtn {
-    right: 80px;
-}
-
-#SignUpBtnResponsive, #SignInBtnResponsive {
-	display: none;
+    right: 140px;
+	font-size: 1.2em;
 }
 /*------------------------------------------------------ fin botones ------------------------------------------------------*/
 
 /*--------------------------- INICIO MEDIA QUERUES ---------------------------*/
 @media only screen and (max-width: 1300px) {
-	#SignUpBtn, #SignInBtn {
+	header {
+		text-align: left;
+	}	
+
+	.lines-effect::before {
 		display: none;
 	}
 
-	.lines-effect::before, .lines-effect::after {
-		display: none;
-	}
-	
-	#SignUpBtnResponsive, #SignInBtnResponsive {
-		display:inline-block;
-		width: 50px;
-		margin-top: 20px;
-		position:absolute;
-	}
-
-	#SignInBtnResponsive {
-		right: 180px;
-		font-size: 1.4em;
-	}
-
-	#SignUpBtnResponsive {
-		right: 80px;
+	.lines-effect {
+		left: 60px;
 	}
 }
 
-@media only screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
-    }
+@media only screen and (max-width: 900px) {
+	body {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
 }
 /*----------------------------- fin media queries -----------------------------*/

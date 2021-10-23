@@ -1,5 +1,6 @@
-body {
+#catswingingbody {
   overflow: hidden;
+  margin: 10;
 }
 
 .all-wrap {

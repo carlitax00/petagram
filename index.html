@@ -7,92 +7,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <!-- <link rel="stylesheet" href="/css/catswinging.css"> -->
-    <link rel="import" href="headertemplate.html">
-    <script src="https://kit.fontawesome.com/99776aea0e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/body-photos.css">
     <link rel="icon" href="/images/Icon.ico">
+    <script src="https://kit.fontawesome.com/99776aea0e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".buttonnav").click(function () {
+                var name = $(this).attr("data-filter");
+                if (name == "all") {
+                    $(".filter").show("2000");
+                }
+                else {
+                    $(".filter").not("." + name).hide("2000");
+                    $(".filter").filter("." + name).show("2000");
+                }
+            });
+            $(".nav a").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+        });
+    </script>
+
     <title>Petagram</title>
 </head>
 
-<header class="header">
-
-    <a id="SignInBtn" class="Btn" href=" /pages/signin.html">Login</a>
-    <a id="SignUpBtn" class="Btn" href="pages/signup.html">Registrate</a>
-    <a id="SignInBtnResponsive" class="Btn" href=" /pages/signin.html"><i class="fas fa-sign-in-alt"></i></a>
-    <a id="SignUpBtnResponsive" class="Btn" href="pages/signup.html"><i class="fas fa-user-plus"></i></a>
+<header>
+    <a id="SignInBtn" class="headerbtn" href=" /pages/signin.html"><i class="fas fa-sign-in-alt"></i></a>
+    <a id="SignUpBtn" class="headerbtn" href="/pages/signup.html"><i class="fas fa-user-plus"></i></a>
 
     <a href="index.html" class="lines-effect">
-        <img height="50" src="/Images/Texto - Petagram negro.png"
-            style="margin-top: 20px; margin-bottom: 30px; float:initial;" title="Home!">
+        <img src="../Images/Texto - Petagram negro.png" style="height: 50px; margin-top: 20px; margin-bottom: 30px;"
+            title="Home!">
     </a>
 
-    <nav class="nav">
-        <li>
-            <a href="pages/pet-pages/dog-photos.html">
-                <img src="/assets/icons/dog icon.png" title="Dogs!" />
-            </a>
-        </li>
+    <div>
+        <nav class="nav">
+            <a href="#" data-filter="all" class="buttonnav all"><img src="/assets/icons/all icon.png"
+                    title="All of them!" style="height: 64px" /></a>
+            <a href="#" data-filter="dogs" class="buttonnav"><img src="/assets/icons/dog icon.png" title="Dogs!" /></a>
+            <a href="#" data-filter="cats" class="buttonnav"><img src="/assets/icons/cat icon.png" title="Cats!" /></a>
+            <a href="#" data-filter="birds" class="buttonnav"><img src="/assets/icons/bird icon.png"
+                    title="Birds!" /></a>
+            <a href="#" data-filter="hamsters" class="buttonnav"><img src="/assets/icons/hamster icon.png"
+                    title="Hamsters!" /></a>
+            <a href="#" data-filter="hedgehogs" class="buttonnav"><img src="/assets/icons/hedgehog icon.png"
+                    title="Hedgehogs!" /></a>
+            <a href="#" data-filter="iguanas" class="buttonnav"><img src="/assets/icons/iguana icon.png"
+                    title="Iguanas!" /></a>
+            <a href="#" data-filter="parrots" class="buttonnav"><img src="/assets/icons/parrot icon.png"
+                    title="Parrots!" /></a>
+            <a href="#" data-filter="rabbits" class="buttonnav"><img src="/assets/icons/rabbit icon.png"
+                    title="Rabbits!" /></a>
+            <a href="#" data-filter="snakes" class="buttonnav"><img src="/assets/icons/snake icon.png"
+                    title="Snakes!" /></a>
+        </nav>
+    </div>
 
-        <li>
-            <a href="pages/pet-pages/cat-photos.html">
-                <img src="/assets/icons/cat icon.png" title="Cats!" />
-            </a>
-        </li>
-
-        <li>
-            <a href="pages/pet-pages/bird-photos.html">
-                <img src="/assets/icons/bird icon.png" title="Birds!" />
-            </a>
-        </li>
-
-        <li>
-            <a href="pages/pet-pages/hamster-photos.html">
-                <img src="/assets/icons/hamster icon.png" title="Hamsters!" />
-            </a>
-        </li>
-
-        <li>
-            <a href="pages/pet-pages/hedgehog-photos.html">
-                <img src="/assets/icons/hedgehog icon.png" title="Hedgehogs!" />
-            </a>
-        </li>
-
-        <li>
-            <a href="pages/pet-pages/iguana-photos.html">
-                <img src="/assets/icons/iguana icon.png" title="Iguanas!" />
-            </a>
-        </li>
-
-        <li>
-            <a href="pages/pet-pages/parrot-photos.html">
-                <img src="/assets/icons/parrot icon.png" title="Parrots!" />
-            </a>
-        </li>
-
-        <li>
-            <a href="pages/pet-pages/rabbit-photos.html">
-                <img src="/assets/icons/rabbit icon.png" title="Rabbits!" />
-            </a>
-        </li>
-
-        <li>
-            <a href="pages/pet-pages/snake-photos.html">
-                <img src="/assets/icons/snake icon.png" title="Snakes!" />
-            </a>
-        </li>
-    </nav>
-
-    <hr class="radial-gradient"> <!-- Línea divisora entre header y body -->
-
+    <hr class="radial-gradient">
 </header>
 
 <body>
-    <!-- <object width = 100% height = 600px data="/pages/catswinging.html"></object> -->
-    <iframe src="/pages/catswinging.html" frameBorder="0" width=100% height=600></iframe>
-</body>
+    <div class="gallerycontainer" onclick="myFunction(this);">
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 1.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 2.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs hedgehogs"><img src="/Images/Fotos/Dogs/Foto H.jpg" onclick="myFunction(this);"
+                title="So cute!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 3.jpeg" onclick="myFunction(this);"
+                title="Dogs!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 4.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 5.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 6.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs cats"><img src="/Images/Fotos/Dogs/Foto C.jpg" onclick="myFunction(this);"
+                title="So cute!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 7.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 8.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+
+        <a class="filter cats"><img src="/Images/Fotos/Cats/Foto 1.jpg" title="Cats!" /></a>
+        <a class="filter cats"><img src="/Images/Fotos/Cats/Foto 2.jpg" title="Cats!" /></a>
+        <a class="filter cats"><img src="/Images/Fotos/Cats/Foto 3.jpg" title="Cats!" /></a>
+        <a class="filter cats"><img src="/Images/Fotos/Cats/Foto 4.jpg" title="Cats!" /></a>
+        <a class="filter cats"><img src="/Images/Fotos/Cats/Foto 5.jpg" title="Cats!" /></a>
+        <a class="filter cats"><img src="/Images/Fotos/Cats/Foto 6.jpg" title="Cats!" /></a>
+        <a class="filter cats"><img src="/Images/Fotos/Cats/Foto 7.jpg" title="Cats!" /></a>
+        <a class="filter cats"><img src="/Images/Fotos/Cats/Foto 8.jpg" title="Cats!" /></a>
+
+        <a class="filter birds"><img src="../../Images/Fotos/Birds/Foto 1.jpg" title="Birds!" /></a>
+        <a class="filter birds"><img src="../../Images/Fotos/Birds/Foto 2.jpg" title="Birds!" /></a>
+        <a class="filter birds"><img src="../../Images/Fotos/Birds/Foto 3.jpg" title="Birds!" /></a>
+        <a class="filter birds"><img src="../../Images/Fotos/Birds/Foto 4.jpg" title="Birds!" /></a>
+        <a class="filter birds"><img src="../../Images/Fotos/Birds/Foto 5.jpg" title="Birds!" /></a>
+        <a class="filter birds"><img src="../../Images/Fotos/Birds/Foto 6.jpg" title="Birds!" /></a>
+        <a class="filter birds"><img src="../../Images/Fotos/Birds/Foto 7.jpg" title="Birds!" /></a>
+        <a class="filter birds hamsters"><img src="../../Images/Fotos/Birds/Foto P.jpg" title="So cute!" /></a>
+
+        <a class="filter hamsters"><img src="/Images/Fotos/Hamsters/Foto 1.jpg" title="Hamsters!" /></a>
+        <a class="filter hamsters"><img src="/Images/Fotos/Hamsters/Foto 2.jpg" title="Hamsters!" /></a>
+        <a class="filter hamsters"><img src="/Images/Fotos/Hamsters/Foto 10.jpg" title="Hamsters!" /></a>
+        <a class="filter hamsters"><img src="/Images/Fotos/Hamsters/Foto 3.jpg" title="Hamsters!" /></a>
+        <a class="filter hamsters"><img src="/Images/Fotos/Hamsters/Foto 4.jpg" title="Hamsters!" /></a>
+        <a class="filter hamsters"><img src="/Images/Fotos/Hamsters/Foto 5.jpg" title="Hamsters!" /></a>
+        <a class="filter hamsters"><img src="/Images/Fotos/Hamsters/Foto 6.jpg" title="Hamsters!" /></a>
+        <a class="filter hamsters"><img src="/Images/Fotos/Hamsters/Foto 7.jpg" title="Hamsters!" /></a>
+        <a class="filter hamsters"><img src="/Images/Fotos/Hamsters/Foto 8.jpg" title="Hamsters!" /></a>
+        <a class="filter hamsters"><img src="/Images/Fotos/Hamsters/Foto 9.jpg" title="Hamsters!" /></a>
+
+        <a class="filter hedgehogs"><img src="/Images/Fotos/Hedgehogs/Foto 1.jpg" title="Hedgehogs!" /></a>
+        <a class="filter hedgehogs"><img src="/Images/Fotos/Hedgehogs/Foto 2.jpg" title="Hedgehogs!" /></a>
+        <a class="filter hedgehogs"><img src="/Images/Fotos/Hedgehogs/Foto 3.jpg" title="Hedgehogs!" /></a>
+        <a class="filter hedgehogs"><img src="/Images/Fotos/Hedgehogs/Foto 4.jpg" title="Hedgehogs!" /></a>
+        <a class="filter hedgehogs"><img src="/Images/Fotos/Hedgehogs/Foto 5.jpg" title="Hedgehogs!" /></a>
+        <a class="filter hedgehogs"><img src="/Images/Fotos/Hedgehogs/Foto 6.jpg" title="Hedgehogs!" /></a>
+        <a class="filter hedgehogs"><img src="/Images/Fotos/Hedgehogs/Foto 7.jpg" title="Hedgehogs!" /></a>
+
+        <a class="filter iguanas"><img src="/Images/Fotos/Iguanas/Foto 1.jpg" title="Iguanas!" /></a>
+        <a class="filter iguanas"><img src="/Images/Fotos/Iguanas/Foto 2.png" title="Iguanas!" /></a>
+        <a class="filter iguanas"><img src="/Images/Fotos/Iguanas/Foto 3.jpg" title="Iguanas!" /></a>
+        <a class="filter iguanas"><img src="/Images/Fotos/Iguanas/Foto 4.jpg" title="Iguanas!" /></a>
+        <a class="filter iguanas"><img src="/Images/Fotos/Iguanas/Foto 5.jpg" title="Iguanas!" /></a>
+        <a class="filter iguanas"><img src="/Images/Fotos/Iguanas/Foto 6.jpg" title="Iguanas!" /></a>
+        <a class="filter iguanas"><img src="/Images/Fotos/Iguanas/Foto 7.jpg" title="Iguanas!" /></a>
+        <a class="filter iguanas"><img src="/Images/Fotos/Iguanas/Foto 8.jpg" title="Iguanas!" /></a>
+
+        <a class="filter parrots"><img src="/Images/Fotos/Parrots/Foto 1.jpg" title="Parrots!" /></a>
+        <a class="filter parrots"><img src="/Images/Fotos/Parrots/Foto 2.jpg" title="Parrots!" /></a>
+        <a class="filter parrots"><img src="/Images/Fotos/Parrots/Foto 9.jpg" title="Parrots!" /></a>
+        <a class="filter parrots"><img src="/Images/Fotos/Parrots/Foto 3.jpg" title="Parrots!" /></a>
+        <a class="filter parrots"><img src="/Images/Fotos/Parrots/Foto 4.jpg" title="Parrots!" /></a>
+        <a class="filter parrots"><img src="/Images/Fotos/Parrots/Foto 5.jpg" title="Parrots!" /></a>
+        <a class="filter parrots"><img src="/Images/Fotos/Parrots/Foto 6.jpeg" title="Parrots!" /></a>
+        <a class="filter parrots"><img src="/Images/Fotos/Parrots/Foto 7.jpg" title="Parrots!" /></a>
+        <a class="filter parrots"><img src="/Images/Fotos/Parrots/Foto 8.jpg" title="Parrots!" /></a>
+
+        <a class="filter rabbits"><img src="/Images/Fotos/Rabbits/Foto 1.jpg" title="Rabbits!" /></a>
+        <a class="filter rabbits"><img src="/Images/Fotos/Rabbits/Foto 2.jpg" title="Rabbits!" /></a>
+        <a class="filter rabbits"><img src="/Images/Fotos/Rabbits/Foto 3.jpg" title="Rabbits!" /></a>
+        <a class="filter rabbits"><img src="/Images/Fotos/Rabbits/Foto 4.jpg" title="Rabbits!" /></a>
+        <a class="filter rabbits"><img src="/Images/Fotos/Rabbits/Foto 5.jpg" title="Rabbits!" /></a>
+        <a class="filter rabbits"><img src="/Images/Fotos/Rabbits/Foto 6.jpg" title="Rabbits!" /></a>
+        <a class="filter rabbits"><img src="/Images/Fotos/Rabbits/Foto 7.jpg" title="Rabbits!" /></a>
+        <a class="filter rabbits"><img src="/Images/Fotos/Rabbits/Foto 8.jpg" title="Rabbits!" /></a>
+
+        <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 1.jpg" title="Snakes!" /></a>
+        <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 2.jpg" title="Snakes!" /></a>
+        <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 3.jpg" title="Snakes!" /></a>
+        <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 4.jpg" title="Snakes!" /></a>
+        <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 5.jpg" title="Snakes!" /></a>
+        <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 6.jpg" title="Snakes!" /></a>
+        <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 7.jpg" title="Snakes!" /></a>
+        <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 8.jpg" title="Snakes!" /></a>
+        <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 9.jpg" title="Snakes!" /></a>
+    </div>
 
 <footer>
-    <a class="Btn" href="pages/contact.html">Contacto</a>
+    <a class="Btn" href="pages/contact.html">Contact</a>
     Powered by =)
 </footer>
 

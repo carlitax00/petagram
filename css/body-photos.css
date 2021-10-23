@@ -1,37 +1,39 @@
-.row, .column {
-    box-sizing: border-box;
-}
-
-.column img {
-    width: 100%;
-    padding: 2.5px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.column {
-    padding: 5px;
-    flex: 25% 0;
-    align-items: stretch;
-}
-
-/*--------------------------- INICIO MEDIA QUERUES ---------------------------*/
-@media only screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
+.gallerycontainer, .gallerycontainer a img {
+	box-sizing: border-box;
     }
 
-	.lines-effect::before, .lines-effect::after {
-		display: none;
-	}
+.gallerycontainer {
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 300px;
+    padding: 20px;
+    grid-gap: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
+.gallerycontainer a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.gallerycontainer a img:hover {   
+    filter:grayscale(85%);
+    transform: scale(1.08);
+    transition: 0.7s;
+}
+
+
+/*--------------------------- INICIO MEDIA QUERUES ---------------------------*/
+@media only screen and (max-width: 900px) {
+    .gallerycontainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    .gallerycontainer {
+        grid-template-columns: 1fr;
     }
 }
 /*----------------------------- fin media queries -----------------------------*/
