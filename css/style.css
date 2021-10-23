@@ -114,8 +114,16 @@ body::-webkit-scrollbar-thumb {
 		display: none;
 	}
 
-	.lines-effect::before, .lines-effect::after {
+	header {
+		text-align: left;
+	}	
+
+	.lines-effect::before {
 		display: none;
+	}
+
+	.lines-effect {
+		left: 60px;
 	}
 	
 	#SignUpBtnResponsive, #SignInBtnResponsive {
@@ -132,6 +140,13 @@ body::-webkit-scrollbar-thumb {
 
 	#SignUpBtnResponsive {
 		right: 80px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	body {
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 }
 /*----------------------------- fin media queries -----------------------------*/
