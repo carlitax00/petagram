@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/body-photos.css">
     <link rel="icon" href="/images/Icon.ico">
     <script src="https://kit.fontawesome.com/99776aea0e.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
 
     <script>
@@ -35,10 +34,8 @@
 </head>
 
 <header>
-    <a id="SignInBtn" class="Btn" href="/pages/signin.html">Login</a>
-    <a id="SignUpBtn" class="Btn" href="/pages/signup.html">Sign Up</a>
-    <a id="SignInBtnResponsive" class="Btn" href=" /pages/signin.html"><i class="fas fa-sign-in-alt"></i></a>
-    <a id="SignUpBtnResponsive" class="Btn" href="/pages/signup.html"><i class="fas fa-user-plus"></i></a>
+    <a id="SignInBtn" class="headerbtn" href=" /pages/signin.html"><i class="fas fa-sign-in-alt"></i></a>
+    <a id="SignUpBtn" class="headerbtn" href="/pages/signup.html"><i class="fas fa-user-plus"></i></a>
 
     <a href="index.html" class="lines-effect">
         <img src="../Images/Texto - Petagram negro.png" style="height: 50px; margin-top: 20px; margin-bottom: 30px;"
@@ -72,17 +69,20 @@
 </header>
 
 <body>
-    <div class="gallerycontainer">
-        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 1.jpg" title="Dogs!" /></a>
-        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 2.jpg" title="Dogs!" /></a>
-        <a class="filter dogs hedgehogs"><img src="/Images/Fotos/Dogs/Foto H.jpg" title="So cute!" /></a>
-        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 3.jpeg" title="Dogs!" /></a>
-        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 4.jpg" title="Dogs!" /></a>
-        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 5.jpg" title="Dogs!" /></a>
-        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 6.jpg" title="Dogs!" /></a>
-        <a class="filter dogs cats"><img src="/Images/Fotos/Dogs/Foto C.jpg" title="So cute!" /></a>
-        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 7.jpg" title="Dogs!" /></a>
-        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 8.jpg" title="Dogs!" /></a>
+    <div class="gallerycontainer" onclick="myFunction(this);">
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 1.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 2.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs hedgehogs"><img src="/Images/Fotos/Dogs/Foto H.jpg" onclick="myFunction(this);"
+                title="So cute!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 3.jpeg" onclick="myFunction(this);"
+                title="Dogs!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 4.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 5.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 6.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs cats"><img src="/Images/Fotos/Dogs/Foto C.jpg" onclick="myFunction(this);"
+                title="So cute!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 7.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
+        <a class="filter dogs"><img src="/Images/Fotos/Dogs/Foto 8.jpg" onclick="myFunction(this);" title="Dogs!" /></a>
 
         <a class="filter cats"><img src="/Images/Fotos/Cats/Foto 1.jpg" title="Cats!" /></a>
         <a class="filter cats"><img src="/Images/Fotos/Cats/Foto 2.jpg" title="Cats!" /></a>
@@ -159,7 +159,6 @@
         <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 8.jpg" title="Snakes!" /></a>
         <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 9.jpg" title="Snakes!" /></a>
     </div>
-</body>
 
 <footer>
     <a class="Btn" href="pages/contact.html">Contact</a>

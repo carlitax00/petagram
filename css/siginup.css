@@ -6,9 +6,26 @@
     margin: 0;
     box-sizing: border-box;
 }
-  
+
+#signupheader {
+  height: 190px;
+}
+
 #signupbody {
     font-family: sans-serif;
+}
+
+.headertext {
+  font-size: 45px;
+  font-family: Requited Script;
+  position:relative;
+	margin: 0;
+  margin-left: 200px;
+  text-align: left;
+}
+
+.radial-gradient {
+  padding: 0;
 }
   
 .container {
@@ -17,14 +34,13 @@
     justify-content: center;
 }
   
-/*  .content {
+  .content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background-color: #f2796e;
-    min-height: 100vh;
     padding: 10px 20px;
-  }*/
+  }
   
 /*.image {
     background-image: url("https://svgshare.com/i/_gZ.svg' title='illustration");
@@ -49,6 +65,7 @@ form {
     max-width: 400px; 
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 50px;
+    margin-top: 180px;
 }
   
 .title {
@@ -73,7 +90,7 @@ label {
   
 form div {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
   
 input:focus {
@@ -88,7 +105,7 @@ input:focus {
 }
   
 .btn-1, .btn-2 {
-    padding: 10px 5px;
+    padding: 7px 5px;
     width: 100%;
     display: flex;
     gap: 15px;
@@ -96,7 +113,7 @@ input:focus {
     align-items: center;
     border: 2px solid #c4c4c4;
     border-radius: 8px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
   

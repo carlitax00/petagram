@@ -14,7 +14,7 @@
 }
 
 header {
-    background-color: #FFF3F3;
+	background-color: #FFF3F3;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -36,6 +36,7 @@ footer {
 	width: 100%;
 }
 
+
 /*------------------------------------------------ INICIO ESTILO DEL SCROLLBAR ------------------------------------------------*/
 body::-webkit-scrollbar {
     width: 10px;
@@ -54,9 +55,8 @@ body::-webkit-scrollbar-thumb {
 
 
 /*------------------------------------------------------ INICIO BOTONES ------------------------------------------------------*/
-.Btn {
+.headerbtn {
 	text-decoration:none;
-	font-family:Arial;
 	box-shadow:inset #ffffff 0px 3px 8px -1px,#999999 5px 4px 4px;
 	background:#d612b5;
     background:linear-gradient(#d612b5, #fc154b);
@@ -66,7 +66,7 @@ body::-webkit-scrollbar-thumb {
 	text-align:center;
 	vertical-align:middle;
 	display:inline-block;
-	font-size:18px;
+	right: 180px;
 	color:#ffffff;
 	width:115px;
 	height:30px;
@@ -78,13 +78,13 @@ body::-webkit-scrollbar-thumb {
     transition: 0.5s;
 }
 
-.Btn:active {
+.headerbtn:active {
 	box-shadow:inset #ffffff 0px 3px 8px -1px,#999999 5px 0 4px;
 	position:relative;
 	top:4px;
 }
 
-.Btn:hover {
+.headerbtn:hover {
 	background:linear-gradient(#fc154b, #d612b5);
     border-radius:25px 0 25px 0;
     transition: 0.5s;
@@ -93,27 +93,23 @@ body::-webkit-scrollbar-thumb {
 #SignInBtn, #SignUpBtn {
     margin-top: 20px;
 	position:absolute;
+	display:inline-block;
+	width: 50px;
 }
 
 #SignInBtn {
     right: 240px;
+	font-size: 1.5em;
 }
 
 #SignUpBtn {
-    right: 80px;
-}
-
-#SignUpBtnResponsive, #SignInBtnResponsive {
-	display: none;
+    right: 140px;
+	font-size: 1.2em;
 }
 /*------------------------------------------------------ fin botones ------------------------------------------------------*/
 
 /*--------------------------- INICIO MEDIA QUERUES ---------------------------*/
 @media only screen and (max-width: 1300px) {
-	#SignUpBtn, #SignInBtn {
-		display: none;
-	}
-
 	header {
 		text-align: left;
 	}	
@@ -124,22 +120,6 @@ body::-webkit-scrollbar-thumb {
 
 	.lines-effect {
 		left: 60px;
-	}
-	
-	#SignUpBtnResponsive, #SignInBtnResponsive {
-		display:inline-block;
-		width: 50px;
-		margin-top: 20px;
-		position:absolute;
-	}
-
-	#SignInBtnResponsive {
-		right: 180px;
-		font-size: 1.4em;
-	}
-
-	#SignUpBtnResponsive {
-		right: 80px;
 	}
 }
 
