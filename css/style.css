@@ -55,7 +55,7 @@ body::-webkit-scrollbar-thumb {
 
 
 /*------------------------------------------------------ INICIO BOTONES ------------------------------------------------------*/
-.headerbtn {
+.headerbtn, .footerbtn {
 	text-decoration:none;
 	box-shadow:inset #ffffff 0px 3px 8px -1px,#999999 5px 4px 4px;
 	background:#d612b5;
@@ -78,13 +78,13 @@ body::-webkit-scrollbar-thumb {
     transition: 0.5s;
 }
 
-.headerbtn:active {
+.headerbtn:active, .footerbtn:active {
 	box-shadow:inset #ffffff 0px 3px 8px -1px,#999999 5px 0 4px;
 	position:relative;
 	top:4px;
 }
 
-.headerbtn:hover {
+.headerbtn:hover, .footerbtn:hover {
 	background:linear-gradient(#fc154b, #d612b5);
     border-radius:25px 0 25px 0;
     transition: 0.5s;
@@ -128,5 +128,9 @@ body::-webkit-scrollbar-thumb {
 		margin-left: 20px;
 		margin-right: 20px;
 	}
+
+	.lines-effect::after {
+        display: none;
+    }
 }
 /*----------------------------- fin media queries -----------------------------*/

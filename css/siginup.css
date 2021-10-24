@@ -11,10 +11,6 @@
   height: 190px;
 }
 
-#signupbody {
-    font-family: sans-serif;
-}
-
 .headertext {
   font-size: 45px;
   font-family: Requited Script;
@@ -33,14 +29,21 @@
     flex-direction: row;
     justify-content: center;
 }
+
+.catswinging {
+  background-color: blueviolet;
+  width: 100%;
+}
   
-  .content {
+.content {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    background-color: #f2796e;
+    background-color: #f2796e;    /*SACRLO DESPUÉS*/
     padding: 10px 20px;
-  }
+    margin-top: 100px;
+    width: 10%;
+}
+ 
   
 /*.image {
     background-image: url("https://svgshare.com/i/_gZ.svg' title='illustration");
@@ -58,24 +61,22 @@
   
 form {
     display: flex;
+    position: static;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 45%;
-    max-width: 400px; 
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 50px;
-    margin-top: 180px;
+    margin-top: 150px;
 }
   
-.title {
+/*.title {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 20px;
-}
+}*/
   
 form div input {
-    width: 100%;
+    width: 55%;
     height: 40px;
     border-radius: 8px;
     border: 2px solid #c4c4c4;
@@ -92,6 +93,10 @@ form div {
     position: relative;
     margin-bottom: 10px;
 }
+ 
+form, .content {
+  width: 30%;
+}
   
 input:focus {
     border: 2px solid #f2796e;
@@ -99,19 +104,17 @@ input:focus {
   
 .btn {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 15px;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
 }
-  
+ 
 .btn-1, .btn-2 {
     padding: 7px 5px;
-    width: 100%;
+    width: 35%;
     display: flex;
-    gap: 15px;
     justify-content: center;
     align-items: center;
-    border: 2px solid #c4c4c4;
     border-radius: 8px;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -119,6 +122,7 @@ input:focus {
   
 .btn-1 {
   background-color: white;
+  border: 2px solid #c4c4c4;
 }
 
 .btn-2 {
@@ -138,9 +142,9 @@ input:focus {
     content:"";
     position: absolute;
     width: 120px;
-    height: 1px;
+    height: 2px;
     background-color: black;
-    top:0.7em;
+    top:0.9em;
 }
 
 .or::before {
@@ -151,16 +155,7 @@ input:focus {
     right: -150px;
 }
 /********************** fin texto "or" ********************/
-  
-  .question {
-    font-size: 15px;
-  }
-  
-  span {
-    color: #f2796e;
-    cursor: pointer;
-  }
-  
+ 
   /**
   * ! style rules for form icons
   **/
@@ -196,15 +191,14 @@ input:focus {
   
   button {
     margin-top: 15px;
-    width: 100%;
+    width: 60%;
     height: 45px;
-    background-color: #f2796e;
-    border: 2px solid #f2796e;
+    background: radial-gradient(at center, red, #cc2bec);
+    border: 0;
     border-radius: 8px;
-    color: #fff;
-    font-size: 20px;
+    color: white;
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.1s ease;
   }
   
@@ -212,30 +206,62 @@ input:focus {
     opacity: 0.8;
   }
   
+  .question, .question a, button, .or {
+    font-family: Requited Script;
+    font-size: 22px;
+  }
+
   /**
   * ! Media Queries are here
   **/
-  
-  @media (max-width: 900px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    form, .content {
-      width: 100%;
-    }
-  
-    .btn {
-      flex-direction: column;
-    }
 
     /*.image {
       height: 70vh;
     }*/
-  }
   
-  @media (max-width: 425px) {
-    form {
-      padding: 20px;
+    @media only screen and (max-width: 1300px) {
+      #signupheader {
+        text-align: center;
+      }
+    
+      .headertext {
+        margin-left: 120px;
+      }
+      
+      .lines-effect::after {
+        display: none;
+      }
     }
+  
+    @media only screen and (max-width: 1000px) {
+      .content {
+        display: none;
+      }
+    
+      form {
+        width: 70%;
+      }
+    }
+
+    
+  
+    
+@media only screen and (max-width: 600px) {
+  form {
+    padding: 20px;
   }
+
+  .btn {
+    flex-direction: column;
+    align-items: center;
+  
+}}
+
+
+  /*.catswinging {
+    display: none;
+  }*/
+
+
+
+
