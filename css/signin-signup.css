@@ -292,6 +292,29 @@ section {
   letter-spacing: 1px;
 }
 
+.loader {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  animation: girar .6s linear infinite;
+  display: none;
+}
+
+@keyframes girar {    /*la animación del loader*/
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 
   /**
   * ! Media Queries are here
