@@ -26,6 +26,7 @@
 }
 /*--------------------------- fin creación de las líneas a los costados del título ---------------------------*/
 
+
  /* Línea debajo de los íconos */
  .radial-gradient {
     background:radial-gradient(at center, red, #cc2bec);
@@ -55,18 +56,12 @@
 
 
 /**************************************************** MEDIA QUERIES DEL HEADER **********/
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1300px) {
     .nav {
         overflow: auto;
         justify-content: flex-start;
 		margin-left: 20px;
 		margin-right: 20px;
-    }
-}
-
-@media only screen and (max-width: 635px) {
-    .lines-effect::after {
-        display: none;
     }
 }
 /**************************************************** MEDIA QUERIES DEL HEADER **********/

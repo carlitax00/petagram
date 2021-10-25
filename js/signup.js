@@ -22,7 +22,7 @@ form.addEventListener("submit", (e) => {
 
 // engine function which will do all the works
 
-let engine = (id, serial, message) => {
+function engine(id, serial, message) {
   if (id.value.trim() === "") {
     errorMsg[serial].innerHTML = message;
     id.style.border = "2px solid red";
@@ -38,4 +38,4 @@ let engine = (id, serial, message) => {
     failureIcon[serial].style.opacity = "0";
     successIcon[serial].style.opacity = "1";
   }
-};
+}
