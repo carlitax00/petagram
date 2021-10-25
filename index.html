@@ -11,6 +11,7 @@
     <link rel="icon" href="/images/Icon.ico">
     <script src="https://kit.fontawesome.com/99776aea0e.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -159,10 +160,16 @@
         <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 8.jpg" title="Snakes!" /></a>
         <a class="filter snakes"><img src="/Images/Fotos/Snakes/Foto 9.jpg" title="Snakes!" /></a>
     </div>
+</body>
 
-<footer>
-    <a class="footerbtn" href="/pages/contact.html">Contact</a>
-    Powered by many paws
+<footer class="footer">
+    <div id="footer-placeholder"></div>
+
+    <script>
+        $.get("/pages/footer.html", function (data) {
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
 </footer>
 
 </html>

@@ -31,7 +31,7 @@
             </div-->
         <form id="form">
             <div class="social">
-                <!--div class="title">Get Started</div-->
+
                 <div class="question">
                     Already Have an Account? <br />
                     <a href="signin.html" style="color: #ff0055">Sign in here!</a>
@@ -62,6 +62,15 @@
             </div>
 
             <div>
+                <label for="phone number">Phone number</label>
+                <i class="fas fa-mobile-alt"></i>
+                <input type="number" name="phonenumber" id="phonenumber" placeholder="54 11 1234 5678" />
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+                <div class="error"></div>
+            </div>
+
+            <div>
                 <label for="email">Email</label>
                 <i class="far fa-envelope"></i>
                 <input type="email" name="email" id="email" placeholder="abc@gmail.com" />
@@ -69,10 +78,6 @@
                 <i class="far fa-check-circle success-icon"></i>
                 <div class="error"></div>
             </div>
-
-            <!-- /** 
-                * ! Password Input here
-               **/ -->
 
             <div>
                 <label for="password">Password</label>
@@ -83,7 +88,7 @@
                 <div class="error"></div>
             </div>
 
-            <button type="submit" id="submit">Submit!</button>
+            <button type="submit" id="submit">Create your account</button>
         </form>
 
         <div class="content">
@@ -94,9 +99,14 @@
     </div>
 </body>
 
-<footer>
-    <a class="footerbtn" href="/pages/contact.html">Contact</a>
-    Powered by many paws
+<footer class="footer">
+    <div id="footer-placeholder"></div>
+
+    <script>
+        $.get("footer.html", function (data) {
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
 </footer>
 
 </html>

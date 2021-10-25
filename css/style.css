@@ -25,15 +25,19 @@ header {
 
 body {
     background-color: #FFF3F3;
-    margin: 200px 40px 50px 40px;
+    margin: 200px 40px 40px 40px;
 }
 
-footer {
+.footer {
     background-color: #ffe6ff;
     position:fixed;
     bottom: 0;
 	left: 0;
 	width: 100%;
+	height: 50px;
+	line-height: 50px;	/*line-height debe coincidir con el height para que el texto se centre en una sola línea. Solo funciona con single-line text*/
+	text-align: center;
+	font-size: 24px;
 }
 
 
@@ -114,12 +118,20 @@ body::-webkit-scrollbar-thumb {
 		text-align: left;
 	}	
 
-	.lines-effect::before {
+	.lines-effect::before, .lines-effect::after {
 		display: none;
 	}
 
 	.lines-effect {
 		left: 60px;
+	}
+
+	#SignInBtn {
+		right: 180px;
+	}
+	
+	#SignUpBtn {
+		right: 80px;
 	}
 }
 
@@ -128,9 +140,11 @@ body::-webkit-scrollbar-thumb {
 		margin-left: 20px;
 		margin-right: 20px;
 	}
+}
 
-	.lines-effect::after {
-        display: none;
-    }
+@media only screen and (max-width: 400px) {
+	.footertext {
+		font-size: auto;
+	}
 }
 /*----------------------------- fin media queries -----------------------------*/

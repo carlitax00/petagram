@@ -60,12 +60,10 @@
 }*/
   
 form {
-    display: flex;
     position: static;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
     padding: 50px;
+    padding-bottom: 75px;
     margin-top: 150px;
 }
   
@@ -76,48 +74,53 @@ form {
 }*/
   
 form div input {
-    width: 55%;
-    height: 40px;
-    border-radius: 8px;
-    border: 2px solid #c4c4c4;
-    padding: 0 30px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 55%;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid #c4c4c4;
+  padding: 0 30px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
   
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
   
 form div {
-    position: relative;
-    margin-bottom: 10px;
+  position: relative;
+  margin-bottom: 10px;
 }
  
 form, .content {
   width: 30%;
 }
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {    /*elimina las flechas de scroll en el input tipo number*/
+  -webkit-appearance: none;
+  margin: 0;
+}
   
 input:focus {
-    border: 2px solid #f2796e;
+  border: 2px solid #f2796e;
 }
   
 .btn {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
 }
  
 .btn-1, .btn-2 {
-    padding: 7px 5px;
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+  padding: 7px 5px;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
   
 .btn-1 {
@@ -126,33 +129,33 @@ input:focus {
 }
 
 .btn-2 {
-    background-color: #4f70b5;
-    color: white;
-    border: 2px solid #4f70b5;
+  background-color: #4f70b5;
+  color: white;
+  border: 2px solid #4f70b5;
 }
 
 /******************** INICIO TEXTO "OR" ********************/
 .or {
-    text-align: center;
-    display:inline-block;
-    position:sticky;
+  text-align: center;
+  display:inline-block;
+  position:sticky;
 }
 
 .or::before, .or::after {
-    content:"";
-    position: absolute;
-    width: 120px;
-    height: 2px;
-    background-color: black;
-    top:0.9em;
+  content:"";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: black;
+  top:0.9em;
 }
 
 .or::before {
-    left: -150px;
+  left: -150px;
 }
 
 .or::after {
-    right: -150px;
+  right: -150px;
 }
 /********************** fin texto "or" ********************/
  
@@ -160,56 +163,54 @@ input:focus {
   * ! style rules for form icons
   **/
   
-  form div i {
-    position: absolute;
-    padding: 10px;
-  }
+form div i {
+  position: absolute;
+  padding: 10px;
+}
   
-  .success-icon,
-  .failure-icon {
-    right: 0;
-    opacity: 0;
-  }
+.success-icon, .failure-icon {
+  right: 0;
+  opacity: 0;
+}
   
-  .failure-icon,
-  .error {
-    color: red;
-  }
+.failure-icon, .error {
+  color: red;
+}
   
-  .success-icon {
-    color: green;
-  }
+.success-icon {
+  color: green;
+}
   
-  .error {
-    font-size: 14.5px;
-    margin-top: 5px;
-  }
+.error {
+  font-size: 14.5px;
+  margin-top: 5px;
+}
   
   /**
   * ! style rules for button 
   **/
   
-  button {
-    margin-top: 15px;
-    width: 60%;
-    height: 45px;
-    background: radial-gradient(at center, red, #cc2bec);
-    border: 0;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
-    transition: all 0.1s ease;
-  }
+button {
+  margin-top: 15px;
+  width: 60%;
+  height: 45px;
+  background: radial-gradient(at center, red, #cc2bec);
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease;
+}
   
-  button:hover {
-    opacity: 0.8;
-  }
+button:hover {
+  opacity: 0.8;
+}
   
-  .question, .question a, button, .or {
-    font-family: Requited Script;
-    font-size: 22px;
-  }
+.question, .question a, button, .or {
+  font-family: Requited Script;
+  font-size: 22px;
+}
 
   /**
   * ! Media Queries are here
@@ -219,48 +220,36 @@ input:focus {
       height: 70vh;
     }*/
   
-    @media only screen and (max-width: 1300px) {
-      #signupheader {
-        text-align: center;
-      }
-    
-      .headertext {
-        margin-left: 120px;
-      }
-      
-      .lines-effect::after {
-        display: none;
-      }
-    }
+@media only screen and (max-width: 1300px) {
+  #signupheader {
+    text-align: center;
+  }
   
-    @media only screen and (max-width: 1000px) {
-      .content {
-        display: none;
-      }
-    
-      form {
-        width: 70%;
-      }
-    }
+  .headertext {
+    margin-left: 120px;
+  }
+  
+  .lines-effect::after {
+    display: none;
+  }
+}
 
-    
+@media only screen and (max-width: 1000px) {
+  .content {
+    display: none;
+  }
   
+  form {
+    width: 70%;
+  }
+}  
     
 @media only screen and (max-width: 600px) {
   form {
     padding: 20px;
   }
+}
 
-  .btn {
-    flex-direction: column;
-    align-items: center;
-  
-}}
-
-
-  /*.catswinging {
-    display: none;
-  }*/
 
 
 
