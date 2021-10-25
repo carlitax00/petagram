@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
-    <script src="https://kit.fontawesome.com/99776aea0e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/signin-signup.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/99776aea0e.js" crossorigin="anonymous"></script>
+    <script src="/js/signin.js" defer></script>
+    <link rel="icon" href="/images/Icon.ico">
     <title>Petagram - Iniciar sesión</title>
 </head>
 
-<header>
+<header id="signinheader">
     <a id="SignUpBtn" class="headerbtn" href="../pages/signup.html"><i class="fas fa-user-plus"></i></a>
 
     <a href="../index.html" class="lines-effect">
@@ -20,10 +22,43 @@
             title="Home!">
     </a>
 
+    <p class="headertext">Get over here!</p>
     <hr class="radial-gradient">
 </header>
 
-<body>
+<body id="signinbody">
+    <section>
+        <div class="signincontainer">
+            <div class="signincontenido">
+                <div class="signinform">
+                    <a>Sign in!</a>
+                    <form id="loginform">
+                        <div class="input">
+                            <span>User</span>
+                            <input type="text" class="user" required>
+                        </div>
+                        <div class="input">
+                            <span>Password</span>
+                            <input type="password" clas="password">
+                        </div>
+                        <div class="input">
+                            <button type="submit">
+                                <div class="loader" id="signinloader"></div>
+                                <span class="signinbtntext">Submit!</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="cubesignin">
+                    <iframe src="cubesignin.html" frameBorder="0"></iframe>
+                </div>
+                <div class="containererror">
+                    <p>Ups! It seems your credentials are not correct. Please try again!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 <footer class="footer">

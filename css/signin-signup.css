@@ -2,12 +2,14 @@
 * ! changing default styles of brower
 **/
 
-#signupheader, #signupbody {
+#signupheader, #signupbody,
+#signinheader, #signinbody {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-#signupheader {
+#signupheader, #signinheader {
   height: 190px;
 }
 
@@ -23,14 +25,15 @@
 .radial-gradient {
   padding: 0;
 }
-  
+
+/************************************************ REGISTRATION PAGE ************************************************/
 .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.catswinging {
+.catswinging {                      /*SCARLO DESPUÉS*/
   background-color: blueviolet;
   width: 100%;
 }
@@ -59,7 +62,7 @@
     font-size: 18px;
 }*/
   
-form {
+#signupform {
     position: static;
     text-align: center;
     padding: 50px;
@@ -73,7 +76,7 @@ form {
     margin-bottom: 20px;
 }*/
   
-form div input {
+#signupform div input {
   width: 55%;
   height: 40px;
   border-radius: 8px;
@@ -87,12 +90,12 @@ label {
   margin-bottom: 5px;
 }
   
-form div {
+#signupform div {
   position: relative;
   margin-bottom: 10px;
 }
  
-form, .content {
+#signupform, .content {
   width: 30%;
 }
 
@@ -163,7 +166,7 @@ input:focus {
   * ! style rules for form icons
   **/
   
-form div i {
+#signupform div i {
   position: absolute;
   padding: 10px;
 }
@@ -212,6 +215,84 @@ button:hover {
   font-size: 22px;
 }
 
+/************************************************ SIGN IN PAGE ************************************************/
+section {
+  height: 600px;
+  padding: 60px;
+  padding-top: 220px;
+}
+
+.signincontainer {
+  background: #fff;
+  height: 100%;
+  display: flex;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .7);
+  overflow: hidden;
+}
+
+/*.sigininimg img {
+  position: relative;
+  width: 120%;
+}*/
+
+.signincontenido {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.containererror {
+  position: absolute;
+  bottom: -60px;
+  height: 60px;
+  left: 0;
+  background: rgb(236, 102, 102);
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all .5s ease;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .7);
+}
+
+.showerror {
+  bottom: 0;
+}
+
+.signinform{
+  margin-top: 0;
+  width: 30%;
+}
+
+.cubesignin iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.cubesignin {
+  align-items: center;
+  display: flex;
+  height: 500px;
+  width: 500px;
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.input span {
+  font-size: 1em;
+  display: inline;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+
   /**
   * ! Media Queries are here
   **/
@@ -239,18 +320,13 @@ button:hover {
     display: none;
   }
   
-  form {
+  #signupform {
     width: 70%;
   }
 }  
     
 @media only screen and (max-width: 600px) {
-  form {
+  #signupform {
     padding: 20px;
   }
 }
-
-
-
-
-

@@ -26,6 +26,7 @@
 }
 /*--------------------------- fin creación de las líneas a los costados del título ---------------------------*/
 
+
  /* Línea debajo de los íconos */
  .radial-gradient {
     background:radial-gradient(at center, red, #cc2bec);
