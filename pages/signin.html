@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/signin-signup.css">
+    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/99776aea0e.js" crossorigin="anonymous"></script>
-    <script src="/js/signin.js" defer></script>
+    <script src="../js/signin.js" defer></script>
     <link rel="icon" href="/images/Icon.ico">
     <title>Petagram - Iniciar sesión</title>
 </head>
@@ -27,45 +28,38 @@
 </header>
 
 <body id="signinbody">
-    <section>
-        <div class="signincontainer">
-            <div class="signincontenido">
-                <div class="signinform">
-                    <a>Sign in!</a>
-                    <form id="loginform">
-                        <div class="input">
-                            <span>User</span>
-                            <input type="text" class="user" required>
-                        </div>
-                        <div class="input">
-                            <span>Password</span>
-                            <input type="password" clas="password">
-                        </div>
-                        <div class="input">
-                            <button type="submit">
-                                <div class="loader" id="signinloader"></div>
-                                <span class="signinbtntext">Submit!</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="cubesignin">
-                    <iframe src="cubesignin.html" frameBorder="0"></iframe>
-                </div>
-                <div class="containererror">
-                    <p>Ups! It seems your credentials are not correct. Please try again!</p>
-                </div>
+    <div class="formcontainer">
+        <form action="" id="form" class="form">
+            <div class="input">
+                <label for="username">Name</label>
+                <input type="text" name="username" id="username" placeholder="John Doe" autocomplete="off" />
+                <small>Error message</small>
             </div>
-        </div>
-    </section>
-
+            <div class="input">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="johndoe@domain.com" autocomplete="off" />
+                <small>Error message</small>
+            </div>
+            <div class="input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" />
+                <small>Error message</small>
+            </div>
+            <div class="input">
+                <label for="c-password">Repeat password</label>
+                <input type="password" name="c-password" id="c-password" placeholder="Repeat password" />
+                <small>Error message</small>
+            </div>
+            <button class="submitbtn">Submit</button>
+        </form>
+    </div>
 </body>
 
 <footer class="footer">
     <div id="footer-placeholder"></div>
 
     <script>
-        $.get("footer.html", function (data) {
+        $.get("/pages/footer.html", function (data) {
             $("#footer-placeholder").replaceWith(data);
         });
     </script>
