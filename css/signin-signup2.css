@@ -2,8 +2,8 @@
 * ! changing default styles of brower
 **/
 
-#signupheader, #signupbody,
-#signinheader, #signinbody {
+#signupheader/*, #signupbody*/,
+#signinheader/*, #signinbody*/ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -216,7 +216,7 @@ button:hover {
 }
 
 /************************************************ SIGN IN PAGE ************************************************/
-section {
+/*section {
   height: 600px;
   padding: 60px;
   padding-top: 220px;
@@ -235,7 +235,7 @@ section {
   width: 120%;
 }*/
 
-.signincontenido {
+/*.signincontenido {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -260,15 +260,16 @@ section {
   box-shadow: 0 0 5px rgba(0, 0, 0, .7);
 }
 
-.showerror {
+.errormessage {
   bottom: 0;
 }
 
-.signinform{
+.signinform {
   margin-top: 0;
   width: 30%;
-}
+}*/
 
+/****************************************** LOGIN PAGE ******************************************/
 .cubesignin iframe {
   width: 100%;
   height: 100%;
@@ -281,28 +282,169 @@ section {
   width: 500px;
 }
 
-.input {
+#signinbody {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5372F0;
+}
+
+::selection{
+  color: #fff;
+  background: #5372F0;
+}
+
+.wrapper{
+  width: 380px;
+  padding: 40px 30px 50px 30px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+}
+
+.wrapper header{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.wrapper form{
+  margin: 40px 0;
+}
+
+form .field{
+  width: 100%;
   margin-bottom: 20px;
 }
 
-.input span {
-  font-size: 1em;
-  display: inline;
-  font-weight: 300;
-  letter-spacing: 1px;
+form .field.shake{
+  animation: shake 0.3s ease-in-out;
 }
 
-.loader {
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid white;
-  border-left: 3px solid white;
-  border-right: 3px solid white;
-  animation: girar .6s linear infinite;
+@keyframes shake {
+  0%, 100%{
+    margin-left: 0px;
+  }
+  20%, 80%{
+    margin-left: -12px;
+  }
+  40%, 60%{
+    margin-left: 12px;
+  }
+}
+
+form .field .input-area{
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+form input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 45px;
+  font-size: 18px;
+  background: none;
+  caret-color: #e780c8;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+}
+
+form .field input:focus,
+form .field.valid input{
+  border-color: #5372F0;
+}
+
+form .field.shake input,
+form .field.error input{
+  border-color: #dc3545;
+}
+
+.field .input-area i{
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.input-area .icon{
+  left: 15px;
+  color: #bfbfbf;
+  transition: color 0.2s ease;
+}
+
+.input-area .error-icon{
+  right: 15px;
+  color: #dc3545;
+}
+
+form input:focus ~ .icon,
+form .field.valid .icon{
+  color: #e780c8;
+}
+
+form .field.shake input:focus ~ .icon,
+form .field.error input:focus ~ .icon{
+  color: #bfbfbf;
+}
+
+form input::placeholder{
+  color: #bfbfbf;
+  font-size: 17px;
+}
+
+form .field .error-txt{
+  color: #dc3545;
+  text-align: left;
+  margin-top: 5px;
+}
+
+form .field .error{
   display: none;
 }
+
+form .field.shake .error,
+form .field.error .error{
+  display: block;
+}
+
+form .pass-txt{
+  text-align: left;
+  margin-top: -10px;
+}
+
+.wrapper a{
+  color: #5372F0;
+  text-decoration: none;
+}
+
+.wrapper a:hover{
+  text-decoration: underline;
+}
+
+form input[type="submit"]{
+  height: 50px;
+  margin-top: 30px;
+  color: #fff;
+  padding: 0;
+  border: none;
+  background: #5372F0;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover{
+  background: #2c52ed;
+}
+
+
 
 @keyframes girar {    /*la animación del loader*/
   from {

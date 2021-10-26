@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/signin-signup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/99776aea0e.js" crossorigin="anonymous"></script>
+    <script src="../js/signin.js" defer></script>
+    <link rel="icon" href="/images/Icon.ico">
+    <title>Petagram - Iniciar sesión</title>
+</head>
+
+<header id="signinheader">
+    <a id="SignUpBtn" class="headerbtn" href="../pages/signup.html"><i class="fas fa-user-plus"></i></a>
+
+    <a href="../index.html" class="lines-effect">
+        <img src="../Images/Texto - Petagram negro.png" style="height: 50px; margin-top: 20px; margin-bottom: 30px;"
+            title="Home!">
+    </a>
+
+    <p class="headertext">Get over here!</p>
+    <hr class="radial-gradient">
+</header>
+
+<body id="signinbody">
+    <!--section>
+        <div class="signincontainer">
+            <div class="signincontenido">
+                <div class="signinform">
+                    <a>Sign in!</a>
+                    <form id="loginform">
+                        <div class="input">
+                            <span>User</span>
+                            <input type="text" class="user" required>
+                        </div>
+                        <div class="input">
+                            <span>Password</span>
+                            <input type="password" clas="password">
+                        </div>
+                        <div class="input">
+                            <button type="submit">
+                                <div class="loader" id="signinloader"></div>
+                                <span class="signinbtntext">Submit!</span>
+                            </button>
+                        </div>
+                    </form>
+                </div-->
+
+    <div class="wrapper">
+        <form action="#">
+            <div class="field email">
+                <div class="input-area">
+                    <input type="text" placeholder="Email Address">
+                    <i class="icon fas fa-envelope"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Email can't be blank</div>
+            </div>
+            <div class="field password">
+                <div class="input-area">
+                    <input type="password" placeholder="Password">
+                    <i class="icon fas fa-lock"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Password can't be blank</div>
+            </div>
+            <div class="pass-txt"><a href="#">Forgot password?</a></div>
+            <input type="submit" value="Login">
+        </form>
+        <div class="sign-txt">Not yet member? <a href="#">Signup now</a></div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+    <div class="cubesignin">
+        <iframe src="cubesignin.html" frameBorder="0"></iframe>
+    </div>
+
+
+    <!--div class="containererror">
+                    <p>Ups! It seems your credentials are not correct. Please try again!</p>
+                </div>
+            </div>
+        </div>
+    </section-->
+
+</body>
+
+<footer class="footer">
+    <div id="footer-placeholder"></div>
+
+    <script>
+        $.get("footer.html", function (data) {
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
+</footer>
+
+</html>

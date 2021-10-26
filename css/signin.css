@@ -1,0 +1,85 @@
+#signinheader {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#signupheader, #signinheader {
+  height: 190px;
+}
+
+.headertext {
+  font-size: 45px;
+  font-family: Requited Script;
+  position:relative;
+  margin: 0;
+  margin-left: 200px;
+  text-align: left;
+}
+
+.radial-gradient {
+  padding: 0;
+}
+
+#signinbody {  
+    height: 72vh;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+}
+
+.formcontainer {  
+    background-color: #fff;  
+    border-radius: 5px;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);  
+    width: 400px;  
+    padding: 30px 40px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.formcontainer h1 {
+    text-align: center;  
+    margin: 0 0 20px;
+    font-size: 24px;  
+}
+
+.input {  
+    margin-bottom: 20px;  
+    position: relative;  
+} 
+
+.input label {  
+    display: block;  
+    margin-bottom: 10px;  
+}  
+
+.input input {  
+    width: 100%;  
+    height: 40px;  
+    padding: 0 15px;  
+    background-color: transparent;  
+    border: 2px solid #f0f0f0;  
+    border-radius: 5px;  
+}  
+
+.input small {  
+    display: block;  
+    color: #e74c3c;  
+    font-weight: bold;  
+    font-size: 11px;  
+    padding-top: 3px;  
+    visibility: hidden;  
+}  
+
+.input.success input {  
+    border: 2px solid #2ecc71;  
+}  
+
+.input.error input {  
+    border: 2px solid #e74c3c;  
+}
+
+.input.error small {  
+    visibility: visible;  
+}
